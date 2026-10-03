@@ -19,6 +19,7 @@ export function SiteHeader() {
         <div className="nav">
           <a className="hide-sm" href="#work">What I do</a>
           <a className="hide-sm" href="#price">Price</a>
+          <a className="hide-sm" href="#about">About</a>
           <a className="hide-sm" href="#where">Where</a>
           <a className="btn" href={`mailto:${studio.email}`}>Email me</a>
         </div>

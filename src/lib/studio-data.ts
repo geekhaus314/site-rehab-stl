@@ -6,7 +6,7 @@ export const studio = {
   site: "https://webrehabstl.pages.dev",
   price: 1200,
   description:
-    "Web design and website repair for locally owned St. Louis businesses. Work directly with the person building your site, get a clear project price, and keep your domain and accounts in your name.",
+    "Web design and website repair for owner-run St. Louis businesses. Get a capable website without another job on your list: one direct contact, clear scope and project pricing, and a process built around your schedule.",
   areas: [
     {
       name: "St. Louis County",
@@ -108,6 +108,27 @@ export const studio = {
     },
   ],
 } as const;
+
+export const designConcepts = [
+  {
+    title: "Auto repair",
+    summary: "A clear path from the first question to a call or service request.",
+    image: "auto-repair-concept.webp",
+    alt: "First-screen snapshot from an independent auto-repair website concept",
+  },
+  {
+    title: "Plumbing",
+    summary: "A service-first layout designed to make urgent contact easy.",
+    image: "flow-king-concept.webp",
+    alt: "First-screen snapshot from an independent plumbing website concept",
+  },
+  {
+    title: "Local plumbing",
+    summary: "A second direction showing how the same approach adapts to a different local business.",
+    image: "st-charles-plumbing-concept.webp",
+    alt: "First-screen snapshot from another independent plumbing website concept",
+  },
+] as const;
 
 export const estimatorQuestions = [
   {

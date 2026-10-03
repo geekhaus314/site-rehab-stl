@@ -1,41 +1,53 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
-  <rect width="1200" height="630" fill="#f7f4ed"/>
-  <rect x="24" y="24" width="1152" height="582" rx="34" fill="#173847"/>
-  <circle cx="1050" cy="142" r="150" fill="#167c78" opacity=".28"/>
-  <circle cx="1112" cy="500" r="170" fill="#c55232" opacity=".16"/>
+  <defs>
+    <linearGradient id="surface" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#eef2ff"/>
+      <stop offset="1" stop-color="#e9f7f4"/>
+    </linearGradient>
+    <linearGradient id="screen" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#405ce3"/>
+      <stop offset="1" stop-color="#168f91"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#surface)"/>
+  <circle cx="1070" cy="114" r="182" fill="#7185f0" opacity=".13"/>
+  <circle cx="1102" cy="554" r="170" fill="#40b9a8" opacity=".13"/>
+  <rect x="28" y="26" width="1144" height="578" rx="34" fill="#fff" opacity=".8"/>
 
-  <rect x="76" y="74" width="70" height="70" rx="20" fill="#167c78"/>
-  <path d="m88 94 8 31h7l7-19 6 19h7l8-31h-9l-4 18-6-18h-5l-6 18-4-18h-9Z" fill="#fffaf2"/>
-  <path d="M126 84h13v13" fill="none" stroke="#e88955" stroke-linecap="round" stroke-linejoin="round" stroke-width="5"/>
-  <text x="166" y="111" fill="#fffaf2" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="700" letter-spacing="1">WEB REHAB</text>
-  <text x="168" y="137" fill="#e88955" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700" letter-spacing="4">ST. LOUIS · MISSOURI</text>
+  <rect x="76" y="74" width="70" height="70" rx="20" fill="url(#screen)"/>
+  <path d="m88 94 8 31h7l7-19 6 19h7l8-31h-9l-4 18-6-18h-5l-6 18-4-18h-9Z" fill="#fff"/>
+  <path d="M126 84h13v13" fill="none" stroke="#ef9a65" stroke-linecap="round" stroke-linejoin="round" stroke-width="5"/>
+  <text x="166" y="111" fill="#172d4b" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="700" letter-spacing="1">WEB REHAB</text>
+  <text x="168" y="137" fill="#168f91" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700" letter-spacing="4">ST. LOUIS · MISSOURI</text>
 
-  <text x="80" y="248" fill="#fffaf2" font-family="Arial, Helvetica, sans-serif" font-size="60" font-weight="700" letter-spacing="-2">Your website</text>
-  <text x="80" y="319" fill="#fffaf2" font-family="Arial, Helvetica, sans-serif" font-size="60" font-weight="700" letter-spacing="-2">should be</text>
-  <text x="80" y="390" fill="#e88955" font-family="Arial, Helvetica, sans-serif" font-size="60" font-weight="700" letter-spacing="-2">getting you work.</text>
-  <text x="84" y="458" fill="#d6e2dc" font-family="Arial, Helvetica, sans-serif" font-size="23">Websites for locally owned St. Louis businesses.</text>
-  <text x="84" y="495" fill="#d6e2dc" font-family="Arial, Helvetica, sans-serif" font-size="23">Direct contact. Clear pricing. Yours to keep.</text>
-  <rect x="84" y="538" width="250" height="4" rx="2" fill="#167c78"/>
-  <text x="84" y="574" fill="#fffaf2" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="700">From $1,200 · No monthly fee</text>
+  <rect x="84" y="195" width="350" height="36" rx="18" fill="#edf1ff"/>
+  <circle cx="105" cy="213" r="5" fill="#168f91"/>
+  <text x="121" y="218" fill="#40516d" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="600">A LOCAL WEB PARTNER FOR BUSY OWNERS</text>
+  <text x="80" y="314" fill="#172d4b" font-family="Arial, Helvetica, sans-serif" font-size="59" font-weight="700" letter-spacing="-2">You run the business.</text>
+  <text x="80" y="384" fill="#405ce3" font-family="Arial, Helvetica, sans-serif" font-size="59" font-weight="700" letter-spacing="-2">I’ll handle the website.</text>
+  <text x="84" y="446" fill="#526783" font-family="Arial, Helvetica, sans-serif" font-size="19">Clear pricing, direct contact, and a process shaped around your schedule.</text>
+  <rect x="84" y="496" width="260" height="54" rx="27" fill="#405ce3"/>
+  <text x="108" y="530" fill="#fff" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="700">ST. LOUIS · FLORISSANT</text>
 
-  <g transform="rotate(3 914 326)">
-    <rect x="692" y="164" width="404" height="322" rx="26" fill="#fffdf8"/>
-    <rect x="710" y="182" width="368" height="35" rx="12" fill="#eee9dc"/>
-    <circle cx="732" cy="199" r="5" fill="#c55232"/>
-    <circle cx="750" cy="199" r="5" fill="#e9c49b"/>
-    <circle cx="768" cy="199" r="5" fill="#167c78"/>
-    <rect x="720" y="234" width="348" height="231" rx="12" fill="#e9efe9"/>
-    <circle cx="1007" cy="270" r="29" fill="#e9c49b"/>
-    <path d="M720 385c55-60 98-68 152-34 49 31 79 20 122-21 29-28 51-34 74-23v158H720V385Z" fill="#a8c7b9"/>
-    <path d="M720 408c60-45 99-24 151-2 52 22 93-23 140-35 24-6 44-1 57 8v86H720v-57Z" fill="#167c78"/>
-    <rect x="750" y="260" width="129" height="10" rx="5" fill="#173847"/>
-    <rect x="750" y="281" width="87" height="7" rx="3.5" fill="#829395"/>
-    <rect x="750" y="305" width="96" height="30" rx="15" fill="#c55232"/>
-    <path d="m777 320 6 6 12-13" fill="none" stroke="#fffaf2" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+  <g transform="translate(78 0)">
+    <g transform="rotate(3 884 347)">
+    <rect x="711" y="214" width="378" height="266" rx="25" fill="#fff" stroke="#d7dfef" stroke-width="2"/>
+    <rect x="729" y="232" width="342" height="31" rx="10" fill="#edf1fb"/>
+    <circle cx="749" cy="247" r="4" fill="#405ce3"/>
+    <circle cx="763" cy="247" r="4" fill="#ef9a65"/>
+    <circle cx="777" cy="247" r="4" fill="#168f91"/>
+    <rect x="730" y="279" width="340" height="181" rx="14" fill="#f4f6ff"/>
+    <rect x="749" y="298" width="154" height="9" rx="4.5" fill="#172d4b"/>
+    <rect x="749" y="318" width="105" height="6" rx="3" fill="#91a0b6"/>
+    <rect x="749" y="344" width="130" height="33" rx="16.5" fill="#405ce3"/>
+    <path d="m774 360 6 6 12-13" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+    <path d="M730 419c54-44 94-35 137-7 46 29 83 18 119-16 29-27 56-34 84-19v83H730v-41Z" fill="#acd9cc"/>
+    <path d="M730 432c52-31 88-17 132-1 48 18 87-18 131-32 31-10 57-4 77 5v56H730v-28Z" fill="url(#screen)"/>
+    </g>
   </g>
-  <rect x="950" y="440" width="142" height="72" rx="18" fill="#fffdf8" stroke="#d8d5c9" stroke-width="2"/>
-  <circle cx="978" cy="476" r="13" fill="#e9efe9"/>
-  <path d="m972 476 4 4 8-9" fill="none" stroke="#167c78" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"/>
-  <rect x="1000" y="468" width="72" height="7" rx="3.5" fill="#173847"/>
-  <rect x="1000" y="482" width="49" height="5" rx="2.5" fill="#829395"/>
+  <rect x="1009" y="432" width="168" height="86" rx="20" fill="#fff" stroke="#d7dfef" stroke-width="2"/>
+  <circle cx="1041" cy="463" r="14" fill="#e9f7f4"/>
+  <path d="m1035 463 4 4 8-9" fill="none" stroke="#168f91" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"/>
+  <rect x="1065" y="455" width="88" height="7" rx="3.5" fill="#172d4b"/>
+  <rect x="1065" y="470" width="61" height="5" rx="2.5" fill="#91a0b6"/>
 </svg>

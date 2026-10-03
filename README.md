@@ -9,6 +9,9 @@ The homepage content and estimator inputs live in `src/lib/studio-data.ts`.
 The estimator is deliberately client-side only: it stores no answers, submits
 no data, and quotes project scope rather than speculative revenue. Portfolio
 screenshots are local assets in `public/shots/` with AVIF/WebP sources.
+The public work gallery separates live projects from illustrative, clearly
+identified design concepts. Jake's About section uses a locally sourced
+portrait and describes the direct, owner-to-developer working relationship.
 
 ## Commands
 

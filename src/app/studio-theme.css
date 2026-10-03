@@ -1,28 +1,28 @@
-/* Web Rehab's palette: warm workshop paper, deep river blue, and repair orange. */
+/* Bright, capable color for a modern local-business partner. */
 :root {
-  --c-bg: #f7f4ed;
-  --c-bg-2: #eee9dc;
-  --c-surface: #fffdf8;
-  --c-surface-2: #e9efe9;
-  --c-line: #d8d5c9;
-  --c-text: #173847;
-  --c-muted: #586d70;
+  --c-bg: #f6f8fd;
+  --c-bg-2: #edf1fb;
+  --c-surface: #ffffff;
+  --c-surface-2: #edf1ff;
+  --c-line: #d7dfef;
+  --c-text: #172d4b;
+  --c-muted: #526783;
 
-  --c-accent: #a94327;
-  --c-accent-ink: #fffaf2;
-  --c-accent-2: #167c78;
-  --c-good: #26724d;
-  --c-bad: #aa382e;
+  --c-accent: #405ce3;
+  --c-accent-ink: #ffffff;
+  --c-accent-2: #168f91;
+  --c-good: #188260;
+  --c-bad: #bb493c;
 
-  --r-sm: 5px;
-  --r-md: 12px;
-  --r-lg: 22px;
+  --r-sm: 8px;
+  --r-md: 16px;
+  --r-lg: 26px;
   --r-pill: 999px;
 
   --font-display: var(--font-sans);
   --leading-tight: 0.98;
-  --hero-wash: 0.2;
-  --motion-intensity: 0.72;
+  --hero-wash: 0.24;
+  --motion-intensity: 0.62;
 
   --t-3xl: clamp(2.15rem, 1.45rem + 3.2vw, 4.05rem);
   --t-2xl: clamp(1.8rem, 1.35rem + 2vw, 2.8rem);

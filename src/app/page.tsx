@@ -2,7 +2,7 @@ import Image from "next/image";
 
 import { ProjectEstimator } from "@/components/project-estimator";
 import { SiteHeader } from "@/components/site-header";
-import { studio } from "@/lib/studio-data";
+import { designConcepts, studio } from "@/lib/studio-data";
 
 const structuredData = {
   "@context": "https://schema.org",
@@ -51,45 +51,42 @@ export default function HomePage() {
             <div className="hero-copy">
               <span className="chip">
                 <span className="dot" aria-hidden="true" />
-                Independent web help · St. Louis metro
+                Web design for owner-run businesses · St. Louis
               </span>
               <h1 className="display" id="hero-heading">
-                Your local business deserves a website that{" "}
-                <span className="display-accent">works as hard as you do.</span>
+                You run the business.
+                <span className="display-accent"> I’ll take the website off your plate.</span>
               </h1>
               <p className="lede">
-                You work directly with me—not an agency or a rotating cast of
-                account managers. I build and fix websites for the locally owned
-                businesses that keep St. Louis moving, so the right customers
-                can find you, trust you, and get in touch.
+                You have customers to look after—not time to chase designers or
+                wrestle with website tools. I plan, build, or fix the site, keep
+                you in the loop, and make the next steps easy.
               </p>
               <div className="hero-actions">
                 <a className="btn btn-lg" href="#contact">
-                  Talk it through
+                  Get a clear next step
                 </a>
                 <a className="btn btn-lg btn-ghost" href="#work">
-                  See what I do
+                  See how I can help
                 </a>
               </div>
               <p className="form-note">
                 From <strong>${studio.price.toLocaleString("en-US")}</strong>.
-                Clear scope. One person to call. No agency retainer.
+                Direct contact. Clear scope. Built around your schedule.
               </p>
             </div>
-            <aside className="card hero-proof" aria-label="Working together">
-              <p className="eyebrow">Local work. Direct contact.</p>
+            <aside className="card hero-proof" aria-label="A simpler way to get your website handled">
+              <p className="eyebrow">A simpler way to get it handled</p>
               <h2 className="h3">
-                You talk to the person doing the work.
+                A capable website, without another job on your list.
               </h2>
               <p className="muted">
-                I will look at what you have, explain what is worth fixing, and
-                give you a clear price before we start. If your site is fine,
-                I will tell you that too.
+                One direct point of contact. Plain-English updates. You review
+                the work before it goes live.
               </p>
               <p className="muted proof-note">
-                Around St. Louis, I can come meet you in person. Prefer to keep
-                it simple? We can do the whole thing by phone and email—no app,
-                account, or sales presentation.
+                St. Louis local, happy to meet in person—or keep it simple by
+                phone and email. No new platform to learn.
               </p>
               <figure className="hero-proof__art">
                 <Image
@@ -99,7 +96,7 @@ export default function HomePage() {
                   height={440}
                   priority
                 />
-                <figcaption>A clear plan starts with a proper look.</figcaption>
+                <figcaption>You stay focused. I’ll keep the web work moving.</figcaption>
               </figure>
             </aside>
           </div>
@@ -140,7 +137,7 @@ export default function HomePage() {
             <div className="sec-head" data-reveal>
               <span className="eyebrow">Price</span>
               <h2 className="h2" id="price-heading">
-                One price, up front, and it does not go up afterwards.
+                Know the scope and price before we start.
               </h2>
               <p className="lede">
                 A new site is ${studio.price.toLocaleString("en-US")}. Fixing
@@ -152,11 +149,10 @@ export default function HomePage() {
             </div>
             <div className="outcomes">
               <article className="outcome" data-reveal>
-                <b>No agency retainer</b>
+                <b>One clear project price</b>
                 <span>
-                  The build is a one-time project price, not a monthly design
-                  retainer. Any domain or hosting costs stay in your name and
-                  are discussed up front.
+                  No ongoing design retainer. Any domain or hosting costs are
+                  explained separately before you commit.
                 </span>
               </article>
               <article className="outcome" data-reveal>
@@ -169,8 +165,8 @@ export default function HomePage() {
               <article className="outcome" data-reveal>
                 <b>Days, not months</b>
                 <span>
-                  Most are done in a few days. I only start once I have your
-                  details, and I will tell you if I am waiting on you.
+                  A focused project, handled in a few days—not a months-long
+                  agency process. We plan around the time you have.
                 </span>
               </article>
             </div>
@@ -251,12 +247,89 @@ export default function HomePage() {
           </div>
         </section>
 
+        <section className="section band concepts" aria-labelledby="concepts-heading">
+          <div className="wrap">
+            <div className="sec-head" data-reveal>
+              <span className="eyebrow">Design concepts</span>
+              <h2 className="h2" id="concepts-heading">
+                A few examples of how I think through a redesign.
+              </h2>
+              <p className="lede">
+                These are independent visual mock-ups—not commissioned projects,
+                client work, or endorsements. Names and sample details appear
+                inside the previews to show the design in context.
+              </p>
+            </div>
+            <div className="concept-grid">
+              {designConcepts.map((concept) => (
+                <article className="concept-card" key={concept.image} data-reveal>
+                  <div className="concept-card__image">
+                    <Image
+                      src={`/mockups/${concept.image}`}
+                      alt={concept.alt}
+                      width={1280}
+                      height={978}
+                      loading="lazy"
+                      unoptimized
+                    />
+                    <span className="concept-card__badge">Independent concept</span>
+                  </div>
+                  <div className="concept-card__copy">
+                    <h3>{concept.title}</h3>
+                    <p>{concept.summary}</p>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="section about" id="about" aria-labelledby="about-heading">
+          <div className="wrap about-grid">
+            <figure className="about-portrait" data-reveal>
+              <Image
+                src="/about/jake-viefhaus.webp"
+                alt="Jake Viefhaus in his St. Louis beanie, looking to the side."
+                width={576}
+                height={720}
+                loading="lazy"
+                unoptimized
+              />
+              <figcaption className="about-portrait__caption">
+                <strong>Jake Viefhaus</strong>
+                <span>Independent web developer · Florissant, Missouri</span>
+              </figcaption>
+              <span className="about-portrait__badge">Your direct point of contact</span>
+            </figure>
+            <div className="about-copy" data-reveal>
+              <span className="eyebrow">About Jake</span>
+              <h2 className="h2" id="about-heading">
+                A local web partner who respects how busy you are.
+              </h2>
+              <p className="lede">
+                I’m Jake, an independent web developer based in Florissant. I
+                work directly with small-business owners who need their website
+                to work—but don’t have spare hours to manage the process.
+              </p>
+              <p>
+                We agree on what matters first. I handle the design and build,
+                keep the technical details in plain English, and bring you in
+                when there’s a decision only you can make. No account-manager
+                handoff and no new platform for you to babysit.
+              </p>
+              <a className="about-contact" href={`mailto:${studio.email}`}>
+                Tell me what you need help with <span aria-hidden="true">→</span>
+              </a>
+            </div>
+          </div>
+        </section>
+
         <section className="section band" id="where" aria-labelledby="where-heading">
           <div className="wrap">
             <div className="sec-head" data-reveal>
               <span className="eyebrow">Where</span>
               <h2 className="h2" id="where-heading">
-                Based in Florissant. Here for local businesses.
+                Your local web partner, based in Florissant.
               </h2>
               <p className="lede">
                 Both sides of the river — the counties around St. Louis, out
@@ -288,11 +361,12 @@ export default function HomePage() {
             <div className="sec-head" data-reveal>
               <span className="eyebrow">Get in touch</span>
               <h2 className="h2" id="contact-heading">
-                Talk directly to the person who will do the work.
+                Let’s make the website one less thing to worry about.
               </h2>
               <p className="lede">
-                Send me your website or tell me what you are trying to get done.
-                I will give you a straight answer—no pitch, no pressure.
+                Tell me what is taking up your time, or send over your current
+                site. I’ll come back with a practical next step and a clear
+                price before any work begins.
               </p>
               <div className="hero-actions">
                 <a className="btn btn-lg" href={`mailto:${studio.email}`}>
