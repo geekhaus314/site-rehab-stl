@@ -51,45 +51,45 @@ export default function HomePage() {
             <div className="hero-copy">
               <span className="chip">
                 <span className="dot" aria-hidden="true" />
-                St. Louis metro — both sides of the river
+                Independent web help · St. Louis metro
               </span>
               <h1 className="display" id="hero-heading">
-                Your website should be{" "}
-                <span className="display-accent">getting you work.</span>
+                Your local business deserves a website that{" "}
+                <span className="display-accent">works as hard as you do.</span>
               </h1>
               <p className="lede">
-                If it is slow, out of date, or you would rather nobody saw it, I
-                fix that. If there is no site, I build one — so people find you,
-                choose you, and book you. Plumbers, roofers, HVAC.
+                You work directly with me—not an agency or a rotating cast of
+                account managers. I build and fix websites for the locally owned
+                businesses that keep St. Louis moving, so the right customers
+                can find you, trust you, and get in touch.
               </p>
               <div className="hero-actions">
-                <a className="btn btn-lg" href="#price">
-                  What it costs
+                <a className="btn btn-lg" href="#contact">
+                  Talk it through
                 </a>
                 <a className="btn btn-lg btn-ghost" href="#work">
-                  What I do
+                  See what I do
                 </a>
               </div>
               <p className="form-note">
                 From <strong>${studio.price.toLocaleString("en-US")}</strong>.
-                Done in a few days. It is yours, and there is no monthly fee.
+                Clear scope. One person to call. No agency retainer.
               </p>
             </div>
-            <aside className="card hero-proof" aria-label="How the work starts">
-              <p className="eyebrow">How this works</p>
+            <aside className="card hero-proof" aria-label="Working together">
+              <p className="eyebrow">Local work. Direct contact.</p>
               <h2 className="h3">
-                I look at your site first, and tell you what is actually wrong.
+                You talk to the person doing the work.
               </h2>
               <p className="muted">
-                I do not guess or sell you things you do not need. If your site
-                is fine I will say so. If it is not, I will tell you which part
-                is the problem, and what it costs to fix.
+                I will look at what you have, explain what is worth fixing, and
+                give you a clear price before we start. If your site is fine,
+                I will tell you that too.
               </p>
               <p className="muted proof-note">
-                If you are local I will come out and look at it properly. Happy
-                to do the paperwork on paper — nothing to sign on a phone, no
-                app, no account. And happy to work entirely remotely if that is
-                easier.
+                Around St. Louis, I can come meet you in person. Prefer to keep
+                it simple? We can do the whole thing by phone and email—no app,
+                account, or sales presentation.
               </p>
               <figure className="hero-proof__art">
                 <Image
@@ -152,17 +152,18 @@ export default function HomePage() {
             </div>
             <div className="outcomes">
               <article className="outcome" data-reveal>
-                <b>No monthly fee</b>
+                <b>No agency retainer</b>
                 <span>
-                  One price, once. There is no hosting bill, no domain bill and
-                  no call in six months asking for another one.
+                  The build is a one-time project price, not a monthly design
+                  retainer. Any domain or hosting costs stay in your name and
+                  are discussed up front.
                 </span>
               </article>
               <article className="outcome" data-reveal>
                 <b>It is yours</b>
                 <span>
-                  Yours on your own domain. If you ever want a different person
-                  to take it over, they can. That is the point.
+                  Your domain, content, and accounts stay in your name. If you
+                  ever want another developer, they can take it over.
                 </span>
               </article>
               <article className="outcome" data-reveal>
@@ -255,7 +256,7 @@ export default function HomePage() {
             <div className="sec-head" data-reveal>
               <span className="eyebrow">Where</span>
               <h2 className="h2" id="where-heading">
-                Based in Florissant. I come to you.
+                Based in Florissant. Here for local businesses.
               </h2>
               <p className="lede">
                 Both sides of the river — the counties around St. Louis, out
@@ -287,11 +288,11 @@ export default function HomePage() {
             <div className="sec-head" data-reveal>
               <span className="eyebrow">Get in touch</span>
               <h2 className="h2" id="contact-heading">
-                Send me the address. I will go and look at it.
+                Talk directly to the person who will do the work.
               </h2>
               <p className="lede">
-                You do not need to know what is wrong with it. That is the part
-                I am for.
+                Send me your website or tell me what you are trying to get done.
+                I will give you a straight answer—no pitch, no pressure.
               </p>
               <div className="hero-actions">
                 <a className="btn btn-lg" href={`mailto:${studio.email}`}>
@@ -338,6 +339,10 @@ export default function HomePage() {
               no testimonials I have not been given, no “clients” who were
               really just examples. If a figure on here is wrong, tell me and I
               will fix it.
+            </p>
+            <p className="footer-aside">
+              A few more things I build:{" "}
+              <a href="https://pwn4g3.pages.dev">pwn4g3.pages.dev</a>
             </p>
           </div>
         </div>

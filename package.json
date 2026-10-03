@@ -7,7 +7,7 @@
     "build": "next build --webpack",
     "start": "next start",
     "lint": "eslint",
-    "deploy": "npm run build && npx wrangler pages deploy out --project-name webrehabstl"
+    "deploy": "npm run build && npx wrangler pages deploy out --project-name webrehabstl --branch main"
   },
   "dependencies": {
     "@tailwindcss/postcss": "^4.3.3",

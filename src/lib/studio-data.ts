@@ -6,7 +6,7 @@ export const studio = {
   site: "https://webrehabstl.pages.dev",
   price: 1200,
   description:
-    "Websites for St. Louis trades that get you found when people search, chosen over the other quotes, and booked while you work. From $1,200, days not months, no monthly fee.",
+    "Web design and website repair for locally owned St. Louis businesses. Work directly with the person building your site, get a clear project price, and keep your domain and accounts in your name.",
   areas: [
     {
       name: "St. Louis County",
@@ -69,8 +69,8 @@ export const studio = {
       label: "Yours",
       title: "Yours, with room to grow into it",
       body:
-        "No monthly fee, no hostage hosting, no permission needed to change anything. Start with one page and add the rest when you are ready for it.",
-      outcome: "Start small, scale up, and never rent your own site back.",
+        "Your domain, content, and accounts stay in your name. Start with what you need now and add more when the business is ready.",
+      outcome: "Keep control of your site, accounts, and next steps.",
     },
   ],
   projects: [

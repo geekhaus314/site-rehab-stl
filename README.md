@@ -24,9 +24,11 @@ npm run start
 to the existing Cloudflare Pages project after reviewing it:
 
 ```bash
-npx wrangler pages deploy out --project-name webrehabstl
+npx wrangler pages deploy out --project-name webrehabstl --branch main
 ```
 
 The Cloudflare CLI must be authenticated for the account that owns the Pages
-project. The deploy command is intentionally manual; building locally does not
-publish changes.
+project. Cloudflare Pages uses `main` as this project's production branch,
+independent of this repository's `master` branch; omitting `--branch main`
+creates a preview deployment instead of updating the live site. `npm run
+deploy` builds and deploys to production.
