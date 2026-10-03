@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 import { ProjectEstimator } from "@/components/project-estimator";
 import { SiteHeader } from "@/components/site-header";
 import { studio } from "@/lib/studio-data";
@@ -46,13 +48,14 @@ export default function HomePage() {
       <main>
         <section className="hero" aria-labelledby="hero-heading">
           <div className="wrap hero-grid">
-            <div>
+            <div className="hero-copy">
               <span className="chip">
                 <span className="dot" aria-hidden="true" />
                 St. Louis metro — both sides of the river
               </span>
               <h1 className="display" id="hero-heading">
-                Your website should be getting you work.
+                Your website should be{" "}
+                <span className="display-accent">getting you work.</span>
               </h1>
               <p className="lede">
                 If it is slow, out of date, or you would rather nobody saw it, I
@@ -88,13 +91,23 @@ export default function HomePage() {
                 app, no account. And happy to work entirely remotely if that is
                 easier.
               </p>
+              <figure className="hero-proof__art">
+                <Image
+                  src="/brand/field-notes.svg"
+                  alt=""
+                  width={640}
+                  height={440}
+                  priority
+                />
+                <figcaption>A clear plan starts with a proper look.</figcaption>
+              </figure>
             </aside>
           </div>
         </section>
 
         <section className="section band" id="work" aria-labelledby="work-heading">
           <div className="wrap">
-            <div className="sec-head">
+            <div className="sec-head" data-reveal>
               <span className="eyebrow">What I do</span>
               <h2 className="h2" id="work-heading">
                 Four things, and you only need one of them.
@@ -103,7 +116,7 @@ export default function HomePage() {
             </div>
             <div className="svc-rows">
               {studio.services.map((service, index) => (
-                <article className="svc-row" key={service.label}>
+                <article className="svc-row" key={service.label} data-reveal>
                   <div className="svc-row__n">
                     <span>{String(index + 1).padStart(2, "0")}</span>
                   </div>
@@ -124,7 +137,7 @@ export default function HomePage() {
 
         <section className="section" id="price" aria-labelledby="price-heading">
           <div className="wrap">
-            <div className="sec-head">
+            <div className="sec-head" data-reveal>
               <span className="eyebrow">Price</span>
               <h2 className="h2" id="price-heading">
                 One price, up front, and it does not go up afterwards.
@@ -138,21 +151,21 @@ export default function HomePage() {
               </p>
             </div>
             <div className="outcomes">
-              <article className="outcome">
+              <article className="outcome" data-reveal>
                 <b>No monthly fee</b>
                 <span>
                   One price, once. There is no hosting bill, no domain bill and
                   no call in six months asking for another one.
                 </span>
               </article>
-              <article className="outcome">
+              <article className="outcome" data-reveal>
                 <b>It is yours</b>
                 <span>
                   Yours on your own domain. If you ever want a different person
                   to take it over, they can. That is the point.
                 </span>
               </article>
-              <article className="outcome">
+              <article className="outcome" data-reveal>
                 <b>Days, not months</b>
                 <span>
                   Most are done in a few days. I only start once I have your
@@ -165,7 +178,7 @@ export default function HomePage() {
 
         <section className="section band" id="estimate" aria-labelledby="estimate-heading">
           <div className="wrap">
-            <div className="sec-head">
+            <div className="sec-head" data-reveal>
               <span className="eyebrow">What would this cost you</span>
               <h2 className="h2" id="estimate-heading">
                 Four questions and I will tell you roughly where you land.
@@ -186,7 +199,7 @@ export default function HomePage() {
 
         <section className="section" aria-labelledby="done-heading">
           <div className="wrap">
-            <div className="sec-head">
+            <div className="sec-head" data-reveal>
               <span className="eyebrow">Built and live</span>
               <h2 className="h2" id="done-heading">
                 Three things I can show you.
@@ -199,7 +212,7 @@ export default function HomePage() {
             </div>
             <div className="work-rows">
               {studio.projects.map((project) => (
-                <article className="work-row" key={project.title}>
+                <article className="work-row" key={project.title} data-reveal>
                   <div className="work-row__shots">
                     {project.shots.map((shot, index) => (
                       <picture className="work-row__pic" key={shot.name}>
@@ -239,7 +252,7 @@ export default function HomePage() {
 
         <section className="section band" id="where" aria-labelledby="where-heading">
           <div className="wrap">
-            <div className="sec-head">
+            <div className="sec-head" data-reveal>
               <span className="eyebrow">Where</span>
               <h2 className="h2" id="where-heading">
                 Based in Florissant. I come to you.
@@ -254,7 +267,7 @@ export default function HomePage() {
             </div>
             <div className="area-groups">
               {studio.areas.map((area) => (
-                <div className="area-group" key={area.name}>
+                <div className="area-group" key={area.name} data-reveal>
                   <h3 className="area-group__label">{area.name}</h3>
                   <div className="areas">
                     {area.places.map((place) => (
@@ -271,7 +284,7 @@ export default function HomePage() {
 
         <section className="section" id="contact" aria-labelledby="contact-heading">
           <div className="wrap">
-            <div className="sec-head">
+            <div className="sec-head" data-reveal>
               <span className="eyebrow">Get in touch</span>
               <h2 className="h2" id="contact-heading">
                 Send me the address. I will go and look at it.
@@ -297,11 +310,14 @@ export default function HomePage() {
       <footer className="footer">
         <div className="wrap footer-grid">
           <div className="stack">
-            <a className="brand" href="/" aria-label="Web Rehab STL home">
-              <span className="brand-mark" aria-hidden="true">
-                WR
-              </span>
-              <span>{studio.name}</span>
+            <a className="brand" href="/" aria-label={`${studio.name} home`}>
+              <Image
+                className="brand__logo"
+                src="/brand/web-rehab-stl.svg"
+                alt=""
+                width={456}
+                height={88}
+              />
             </a>
             <p>
               {studio.founder} — {studio.city}, Missouri

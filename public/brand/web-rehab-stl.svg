@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 456 88" role="img" aria-labelledby="title">
+  <title id="title">Web Rehab STL</title>
+  <defs>
+    <linearGradient id="mark" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#167c78"/>
+      <stop offset="1" stop-color="#173847"/>
+    </linearGradient>
+  </defs>
+  <rect x="2" y="2" width="84" height="84" rx="24" fill="url(#mark)"/>
+  <path d="m18 25 11 39h9l8-24 8 24h9l11-39H63l-5 23-8-23h-8l-8 23-5-23H18Z" fill="#fffaf2"/>
+  <path d="M67 12h17v17" fill="none" stroke="#e88955" stroke-linecap="round" stroke-linejoin="round" stroke-width="6"/>
+  <text x="106" y="48" fill="#173847" font-family="Arial, Helvetica, sans-serif" font-size="31" font-weight="700" letter-spacing="-1.2">WEB REHAB</text>
+  <text x="108" y="72" fill="#167c78" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700" letter-spacing="4.1">ST. LOUIS · MISSOURI</text>
+</svg>

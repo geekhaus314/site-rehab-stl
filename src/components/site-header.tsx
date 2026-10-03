@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 import { studio } from "@/lib/studio-data";
 
 export function SiteHeader() {
@@ -5,10 +7,14 @@ export function SiteHeader() {
     <header className="header">
       <nav className="wrap header-in" aria-label="Primary">
         <a className="brand" href="/" aria-label={`${studio.name} home`}>
-          <span className="brand-mark" aria-hidden="true">
-            WR
-          </span>
-          <span>{studio.name}</span>
+          <Image
+            className="brand__logo"
+            src="/brand/web-rehab-stl.svg"
+            alt=""
+            width={456}
+            height={88}
+            priority
+          />
         </a>
         <div className="nav">
           <a className="hide-sm" href="#work">What I do</a>

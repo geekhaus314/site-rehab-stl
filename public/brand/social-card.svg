@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#f7f4ed"/>
+  <rect x="24" y="24" width="1152" height="582" rx="34" fill="#173847"/>
+  <circle cx="1050" cy="142" r="150" fill="#167c78" opacity=".28"/>
+  <circle cx="1112" cy="500" r="170" fill="#c55232" opacity=".16"/>
+
+  <rect x="76" y="74" width="70" height="70" rx="20" fill="#167c78"/>
+  <path d="m88 94 8 31h7l7-19 6 19h7l8-31h-9l-4 18-6-18h-5l-6 18-4-18h-9Z" fill="#fffaf2"/>
+  <path d="M126 84h13v13" fill="none" stroke="#e88955" stroke-linecap="round" stroke-linejoin="round" stroke-width="5"/>
+  <text x="166" y="111" fill="#fffaf2" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="700" letter-spacing="1">WEB REHAB</text>
+  <text x="168" y="137" fill="#e88955" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700" letter-spacing="4">ST. LOUIS · MISSOURI</text>
+
+  <text x="80" y="248" fill="#fffaf2" font-family="Arial, Helvetica, sans-serif" font-size="60" font-weight="700" letter-spacing="-2">Your website</text>
+  <text x="80" y="319" fill="#fffaf2" font-family="Arial, Helvetica, sans-serif" font-size="60" font-weight="700" letter-spacing="-2">should be</text>
+  <text x="80" y="390" fill="#e88955" font-family="Arial, Helvetica, sans-serif" font-size="60" font-weight="700" letter-spacing="-2">getting you work.</text>
+  <text x="84" y="458" fill="#d6e2dc" font-family="Arial, Helvetica, sans-serif" font-size="23">Websites for St. Louis trades.</text>
+  <text x="84" y="495" fill="#d6e2dc" font-family="Arial, Helvetica, sans-serif" font-size="23">Clear advice. Straight prices. Built to be yours.</text>
+  <rect x="84" y="538" width="250" height="4" rx="2" fill="#167c78"/>
+  <text x="84" y="574" fill="#fffaf2" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="700">From $1,200 · No monthly fee</text>
+
+  <g transform="rotate(3 914 326)">
+    <rect x="692" y="164" width="404" height="322" rx="26" fill="#fffdf8"/>
+    <rect x="710" y="182" width="368" height="35" rx="12" fill="#eee9dc"/>
+    <circle cx="732" cy="199" r="5" fill="#c55232"/>
+    <circle cx="750" cy="199" r="5" fill="#e9c49b"/>
+    <circle cx="768" cy="199" r="5" fill="#167c78"/>
+    <rect x="720" y="234" width="348" height="231" rx="12" fill="#e9efe9"/>
+    <circle cx="1007" cy="270" r="29" fill="#e9c49b"/>
+    <path d="M720 385c55-60 98-68 152-34 49 31 79 20 122-21 29-28 51-34 74-23v158H720V385Z" fill="#a8c7b9"/>
+    <path d="M720 408c60-45 99-24 151-2 52 22 93-23 140-35 24-6 44-1 57 8v86H720v-57Z" fill="#167c78"/>
+    <rect x="750" y="260" width="129" height="10" rx="5" fill="#173847"/>
+    <rect x="750" y="281" width="87" height="7" rx="3.5" fill="#829395"/>
+    <rect x="750" y="305" width="96" height="30" rx="15" fill="#c55232"/>
+    <path d="m777 320 6 6 12-13" fill="none" stroke="#fffaf2" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+  </g>
+  <rect x="950" y="440" width="142" height="72" rx="18" fill="#fffdf8" stroke="#d8d5c9" stroke-width="2"/>
+  <circle cx="978" cy="476" r="13" fill="#e9efe9"/>
+  <path d="m972 476 4 4 8-9" fill="none" stroke="#167c78" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"/>
+  <rect x="1000" y="468" width="72" height="7" rx="3.5" fill="#173847"/>
+  <rect x="1000" y="482" width="49" height="5" rx="2.5" fill="#829395"/>
+</svg>
