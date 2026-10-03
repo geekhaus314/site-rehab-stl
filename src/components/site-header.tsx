@@ -1,19 +1,20 @@
+import { studio } from "@/lib/studio-data";
+
 export function SiteHeader() {
   return (
-    <header className="site-header">
-      <nav className="site-header__nav" aria-label="Main navigation">
-        <a className="site-header__brand" href="/" aria-label="Site Rehab STL home">
-          <span className="site-header__mark" aria-hidden="true">
-            SR
+    <header className="header">
+      <nav className="wrap header-in" aria-label="Primary">
+        <a className="brand" href="/" aria-label={`${studio.name} home`}>
+          <span className="brand-mark" aria-hidden="true">
+            WR
           </span>
-
-          <span>Site Rehab STL</span>
+          <span>{studio.name}</span>
         </a>
-
-        <div className="site-header__links">
-          <a href="#services">Services</a>
-          <a href="#work">Work</a>
-          <a href="#contact">Start a project</a>
+        <div className="nav">
+          <a className="hide-sm" href="#work">What I do</a>
+          <a className="hide-sm" href="#price">Price</a>
+          <a className="hide-sm" href="#where">Where</a>
+          <a className="btn" href={`mailto:${studio.email}`}>Email me</a>
         </div>
       </nav>
     </header>
