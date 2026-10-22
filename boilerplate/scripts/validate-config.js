@@ -2,9 +2,13 @@
  * Build-time validation of the business profile against JSON Schema.
  * Exits non-zero if validation fails, halting the build.
  */
-const fs = require('fs');
-const path = require('path');
-const Ajv = require('ajv');
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
+import Ajv from 'ajv';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const ROOT = path.resolve(__dirname, '..');
 const SCHEMA_PATH = path.join(ROOT, 'config', 'business.schema.json');

@@ -3,13 +3,13 @@
  * Reads inbox data from /api/admin/inquiries, replies via /api/admin/reply.
  * Auth uses HMAC tokens from src/lib/security.js.
  */
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import Head from 'next/head';
 import { createAdminToken, verifyAdminToken } from '../lib/security';
 
 export default function Admin() {
-  const [loggedIn, setLoggedIn] = useState(false);
-  const [token, setToken] = useState('');
+  const [loggedIn, setLoggedIn] = useState(() => !!sessionStorage.getItem('admin_token'));
+  const [token, setToken] = useState(() => sessionStorage.getItem('admin_token') || '');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
@@ -19,13 +19,38 @@ export default function Admin() {
   const [sending, setSending] = useState(false);
   const [sent, setSent] = useState('');
 
-  useEffect(() => {
-    const saved = sessionStorage.getItem('admin_token');
-    if (saved) {
-      setToken(saved);
-      setLoggedIn(true);
-    }
+  const handleLogout = useCallback(() => {
+    sessionStorage.removeItem('admin_token');
+    setToken('');
+    setLoggedIn(false);
+    setData(null);
+    setPassword('');
   }, []);
+
+  const fetchData = useCallback(async () => {
+    setLoading(true);
+    try {
+      const res = await fetch('/api/admin/inquiries', {
+        headers: { Authorization: `Bearer ${token}` },
+      });
+      const json = await res.json();
+      if (res.ok) {
+        setData(json);
+      } else {
+        setError('Session expired');
+        handleLogout();
+      }
+    } catch {
+      setError('Failed to load data');
+    }
+    setLoading(false);
+  }, [token, handleLogout]);
+
+  useEffect(() => {
+    if (loggedIn) {
+      fetchData();
+    }
+  }, [loggedIn, fetchData]);
 
   const handleLogin = async (e) => {
     e.preventDefault();
@@ -49,37 +74,6 @@ export default function Admin() {
       setError('Login failed');
     }
     setLoading(false);
-  };
-
-  const fetchData = async () => {
-    setLoading(true);
-    try {
-      const res = await fetch('/api/admin/inquiries', {
-        headers: { Authorization: `Bearer ${token}` },
-      });
-      const json = await res.json();
-      if (res.ok) {
-        setData(json);
-      } else {
-        setError('Session expired');
-        handleLogout();
-      }
-    } catch {
-      setError('Failed to load data');
-    }
-    setLoading(false);
-  };
-
-  useEffect(() => {
-    if (loggedIn) fetchData();
-  }, [loggedIn]);
-
-  const handleLogout = () => {
-    sessionStorage.removeItem('admin_token');
-    setToken('');
-    setLoggedIn(false);
-    setData(null);
-    setPassword('');
   };
 
   const openReply = (msg) => {
@@ -126,7 +120,7 @@ export default function Admin() {
         </Head>
         <main className="min-h-screen flex items-center justify-center" style={{ backgroundColor: 'var(--theme-background)' }}>
           <div className="w-full max-w-sm p-8 rounded-xl border" style={{ backgroundColor: 'var(--theme-surface)', borderColor: 'var(--theme-border)' }}>
-            <h1 className="text-2xl font-serif mb-6 text-center" style={{ color: 'var(--theme-text)' }}>Admin</h1>
+            <h1 className="text-2xl font-serif mb-6 text-center text-[var(--theme-text)]">Admin</h1>
             <form onSubmit={handleLogin}>
               <input
                 type="password"
@@ -157,7 +151,7 @@ export default function Admin() {
       <main className="min-h-screen" style={{ backgroundColor: 'var(--theme-background)' }}>
         <div className="max-w-6xl mx-auto px-6 pt-32 pb-20">
           <div className="flex items-center justify-between mb-10">
-            <h1 className="text-2xl font-serif" style={{ color: 'var(--theme-text)' }}>Inbox</h1>
+            <h1 className="text-2xl font-serif text-[var(--theme-text)]">Inbox</h1>
             <div className="flex gap-3">
               <button onClick={fetchData} className="text-sm font-sans px-4 py-2 rounded-lg border transition-colors" style={{ borderColor: 'rgba(255,255,255,0.3)', color: 'rgba(255,255,255,0.6)' }}>Refresh</button>
               <button onClick={handleLogout} className="text-sm font-sans px-4 py-2 rounded-lg border transition-colors" style={{ borderColor: 'rgba(255,255,255,0.3)', color: 'rgba(255,255,255,0.6)' }}>Sign Out</button>
@@ -176,15 +170,15 @@ export default function Admin() {
             <>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-10">
                 <div className="rounded-xl p-5 border" style={{ backgroundColor: 'rgba(255,255,255,0.02)', borderColor: 'var(--theme-border)' }}>
-                  <p className="text-3xl font-serif" style={{ color: 'var(--theme-accent)' }}>{data.inquiries || 0}</p>
+                  <p className="text-3xl font-serif text-[var(--theme-accent)]">{data.inquiries || 0}</p>
                   <p className="text-xs font-sans mt-1 uppercase tracking-wider" style={{ color: 'rgba(255,255,255,0.4)' }}>Inquiries</p>
                 </div>
                 <div className="rounded-xl p-5 border" style={{ backgroundColor: 'rgba(255,255,255,0.02)', borderColor: 'var(--theme-border)' }}>
-                  <p className="text-3xl font-serif" style={{ color: 'var(--theme-accent)' }}>{data.bookings || 0}</p>
+                  <p className="text-3xl font-serif text-[var(--theme-accent)]">{data.bookings || 0}</p>
                   <p className="text-xs font-sans mt-1 uppercase tracking-wider" style={{ color: 'rgba(255,255,255,0.4)' }}>Bookings</p>
                 </div>
                 <div className="rounded-xl p-5 border" style={{ backgroundColor: 'rgba(255,255,255,0.02)', borderColor: 'var(--theme-border)' }}>
-                  <p className="text-3xl font-serif" style={{ color: 'var(--theme-accent)' }}>{data.contacts || 0}</p>
+                  <p className="text-3xl font-serif text-[var(--theme-accent)]">{data.contacts || 0}</p>
                   <p className="text-xs font-sans mt-1 uppercase tracking-wider" style={{ color: 'rgba(255,255,255,0.4)' }}>Contact</p>
                 </div>
               </div>
@@ -195,7 +189,7 @@ export default function Admin() {
                     <div key={i} className="rounded-xl p-5 border" style={{ backgroundColor: 'rgba(255,255,255,0.02)', borderColor: 'var(--theme-border)' }}>
                       <div className="flex items-start justify-between gap-4 mb-2">
                         <div className="min-w-0 flex-1">
-                          <span className="text-sm font-medium font-sans" style={{ color: 'var(--theme-text)' }}>{msg.name}</span>
+                          <span className="text-sm font-medium font-sans text-[var(--theme-text)]">{msg.name}</span>
                           <span className="text-xs font-sans ml-3" style={{ color: 'rgba(255,255,255,0.35)' }}>{msg.email}</span>
                           {msg.phone && <span className="text-xs font-sans ml-3" style={{ color: 'rgba(255,255,255,0.35)' }}>{msg.phone}</span>}
                         </div>
@@ -209,7 +203,7 @@ export default function Admin() {
                         </div>
                       </div>
                       {msg.service && (
-                        <p className="text-xs font-sans mb-1" style={{ color: 'var(--theme-accent)' }}>{msg.service}</p>
+                        <p className="text-xs font-sans mb-1 text-[var(--theme-accent)]">{msg.service}</p>
                       )}
                       <p className="text-sm font-sans leading-relaxed whitespace-pre-wrap" style={{ color: 'rgba(255,255,255,0.5)' }}>{msg.message}</p>
                     </div>
@@ -227,11 +221,11 @@ export default function Admin() {
             <div className="fixed inset-0 z-50 flex items-center justify-center p-4" style={{ backgroundColor: 'rgba(0,0,0,0.7)' }}>
               <div className="w-full max-w-lg rounded-xl border p-6" style={{ backgroundColor: '#111', borderColor: 'var(--theme-border)' }}>
                 <div className="flex items-center justify-between mb-4">
-                  <h2 className="text-lg font-serif" style={{ color: 'var(--theme-text)' }}>Reply to {replying.name}</h2>
+                  <h2 className="text-lg font-serif text-[var(--theme-text)]">Reply to {replying.name}</h2>
                   <button onClick={() => setReplying(null)} className="text-sm font-sans" style={{ color: 'rgba(255,255,255,0.4)' }}>Close</button>
                 </div>
                 <p className="text-xs font-sans mb-1" style={{ color: 'rgba(255,255,255,0.3)' }}>To: {replying.email}</p>
-                {replying.service && <p className="text-xs font-sans mb-3" style={{ color: 'var(--theme-accent)' }}>Re: {replying.service}</p>}
+                {replying.service && <p className="text-xs font-sans mb-3 text-[var(--theme-accent)]">Re: {replying.service}</p>}
                 <div className="rounded-lg p-3 mb-4 text-sm font-sans max-h-32 overflow-y-auto" style={{ backgroundColor: 'rgba(255,255,255,0.03)', color: 'rgba(255,255,255,0.4)' }}>
                   {replying.message}
                 </div>

@@ -4,15 +4,15 @@
  * available at runtime without Node `fs` (which cannot be bundled for the
  * browser). Schema validation happens at build time in scripts/validate-config.js.
  */
-import profile from '../config/business.profile.json';
+import profile from '../../config/business.profile.json';
+import schema from '../../config/business.schema.json';
 
 export function getBusinessProfile() {
   return profile;
 }
 
 export function getBusinessSchema() {
-  // Schema is validated at build time; re-export for reference.
-  return require('../config/business.schema.json');
+  return schema;
 }
 
 export function resolveDomain(profile) {

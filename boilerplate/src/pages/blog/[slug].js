@@ -6,6 +6,7 @@ import Head from 'next/head';
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
+import { getPostBySlug } from '../../lib/posts';
 
 export async function getStaticPaths() {
   const postsDirectory = path.join(process.cwd(), 'content/blog');
@@ -21,15 +22,13 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }) {
   const { slug } = params;
-  const fullPath = path.join(process.cwd(), 'content/blog', `${slug}.mdx`);
-  if (!fs.existsSync(fullPath)) {
+  const post = getPostBySlug(slug);
+  if (!post) {
     return { notFound: true };
   }
-  const fileContents = fs.readFileSync(fullPath, 'utf8');
-  const { data, content } = matter(fileContents);
 
   return {
-    props: { post: { slug, ...data, content } },
+    props: { post },
   };
 }
 

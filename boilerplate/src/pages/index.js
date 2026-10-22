@@ -124,9 +124,9 @@ export default function Home({ profile }) {
           <div className="container text-center">
             <div className="sectionHead">
               <span className="eyebrow">Get in touch</span>
-              <h2 id="contact-heading" className="heading">
-                Let's make it one less thing to worry about.
-              </h2>
+                <h2 id="contact-heading" className="heading">
+                  Let&rsquo;s make it one less thing to worry about.
+                </h2>
             </div>
             <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
               <a href={`mailto:${contact.email}`} className="btn">

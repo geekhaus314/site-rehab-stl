@@ -23,6 +23,7 @@ export function getAllPosts() {
     return {
       slug,
       ...data,
+      date: data.date ? new Date(data.date).toISOString() : null,
       readingTime: stats.text,
       wordCount: stats.words,
     };
@@ -41,6 +42,7 @@ export function getPostBySlug(slug) {
   return {
     slug,
     ...data,
+    date: data.date ? new Date(data.date).toISOString() : null,
     content,
     readingTime: stats.text,
     wordCount: stats.words,

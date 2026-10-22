@@ -14,10 +14,10 @@ export default function Footer({ profile }) {
     <footer className={styles.footer} aria-label="Site footer">
       <div className={styles.wrap}>
         <div className={styles.stack}>
-          <a href="/" className={styles.brand} aria-label={`${name} home`}>
+          <Link href="/" className={styles.brand} aria-label={`${name} home`}>
             {domain.replace(/\./g, '').toUpperCase()}
             <span className={styles.brandAccent}>·{shortName}</span>
-          </a>
+          </Link>
           <p className={styles.contactLine}>
             {content.tagline}
           </p>

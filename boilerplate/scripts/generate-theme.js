@@ -5,8 +5,12 @@
  * This file is imported by src/pages/_app.js so every page inherits the client's
  * brand colors without any hardcoded brand artifacts in components.
  */
-const fs = require('fs');
-const path = require('path');
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const ROOT = path.resolve(__dirname, '..');
 const PROFILE_PATH = path.join(ROOT, 'config', 'business.profile.json');
