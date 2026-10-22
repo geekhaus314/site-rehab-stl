@@ -1,0 +1,91 @@
+/* Footer.module.css — no hardcoded brand colors */
+
+.footer {
+  margin-top: auto;
+  padding: 5rem 0 3rem;
+  border-top: 1px solid var(--theme-border);
+  background-color: var(--theme-surface);
+}
+
+.wrap {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+}
+
+@media (min-width: 768px) {
+  .wrap {
+    grid-template-columns: 2fr 1fr 1fr;
+  }
+}
+
+.stack {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.brand {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: var(--theme-text);
+  letter-spacing: -0.02em;
+}
+
+.brandAccent {
+  color: var(--theme-accent);
+}
+
+.contactLine {
+  color: var(--theme-text-muted);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.contactLine a {
+  color: var(--theme-accent);
+  transition: color var(--transition);
+}
+
+.contactLine a:hover {
+  color: var(--theme-text);
+}
+
+.heading {
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--theme-accent);
+  margin-bottom: 1rem;
+}
+
+.linkList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.linkList a {
+  color: var(--theme-text-muted);
+  font-size: 0.9rem;
+  transition: color var(--transition);
+}
+
+.linkList a:hover {
+  color: var(--theme-text);
+}
+
+.copyright {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--theme-border);
+  color: var(--theme-text-muted);
+  font-size: 0.75rem;
+  text-align: center;
+}

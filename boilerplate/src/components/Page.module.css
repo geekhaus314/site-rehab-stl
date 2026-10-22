@@ -1,0 +1,35 @@
+/* Page module — shared page container styling */
+
+.page {
+  min-height: 60vh;
+}
+
+.sectionHead {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 4rem;
+}
+
+.eyebrow {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--theme-accent);
+  margin-bottom: 1rem;
+}
+
+.heading {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  margin-bottom: 1rem;
+  line-height: 1.1;
+}
+
+.lede {
+  color: var(--theme-text-muted);
+  font-size: 1.1rem;
+  line-height: 1.7;
+  max-width: 600px;
+  margin: 0 auto;
+}

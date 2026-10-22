@@ -1,0 +1,11 @@
+{
+  "delivery.mode": "production",
+  "scope.core": "Read a central business JSON profile, dynamically inject corresponding theme custom properties and content structures, compile individual client configurations, and pass build checks without hardcoded brand artifacts.",
+  "scope.out": "No database, no persistence, no real email sending, no payment processing, no user accounts beyond admin password.",
+  "stack.frontend": "Next.js 14 (Pages Router), Vanilla dependency-free CSS with CSS Modules and semantic custom properties, zero external design component libraries.",
+  "stack.backend": "Next.js API Routes (pages/api/), portable to Vercel Edge and Cloudflare Pages Workers.",
+  "stack.database": "none",
+  "auth.model": "Admin password validated via secure environment HMAC tokens (sessionStorage client-side, server-side HMAC verification).",
+  "deployment": "Cloudflare Pages with Workers / Vercel Edge Architecture, static export capable.",
+  "quality.acceptance": "100% production build pass condition, zero lingering hardcoded brand references, automated schema validation on the runtime configuration profile, error/empty/loading states on all interactive surfaces."
+}

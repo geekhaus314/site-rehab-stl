@@ -1,0 +1,36 @@
+/* Layout.module.css — no hardcoded brand colors */
+
+.root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--theme-background);
+  color: var(--theme-text);
+}
+
+.content {
+  flex: 1;
+}
+
+.skipLink {
+  position: absolute;
+  left: -9999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  z-index: -9999;
+}
+
+.skipLink:focus {
+  position: static;
+  width: auto;
+  height: auto;
+  overflow: visible;
+  z-index: 9999;
+  padding: 0.75rem 1rem;
+  background-color: var(--theme-primary);
+  color: var(--theme-primary-inverse);
+  border-radius: var(--radius);
+  font-weight: 700;
+}

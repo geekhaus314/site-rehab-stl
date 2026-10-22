@@ -1,0 +1,35 @@
+/* ============================================================
+   * AUTO-GENERATED THEME — DO NOT EDIT BY HAND
+   * Source: config/business.profile.json (id: myhairloss)
+   * Regenerate with: node scripts/generate-theme.js
+   * ============================================================ */
+
+:root {
+  /* Brand colors */
+  --theme-primary: #c5a059;
+  --theme-primary-rgb: 197, 160, 89;
+  --theme-primary-inverse: #0a0a0a;
+  --theme-accent: #d4b46a;
+  --theme-accent-rgb: 212, 180, 106;
+
+  /* Structural colors */
+  --theme-background: #0a0a0a;
+  --theme-surface: #1a1a1a;
+  --theme-text: #fdfdfb;
+  --theme-text-muted: #9ca3af;
+
+  /* Derived utilities */
+  --theme-border: rgba(197, 160, 89, 0.15);
+  --theme-border-hover: rgba(197, 160, 89, 0.35);
+  --theme-shadow: 0 4px 24px rgba(0, 0, 0, 0.35);
+
+  /* Typography */
+  --font-serif: Georgia, 'Times New Roman', serif;
+  --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  /* Radius */
+  --radius: 12px;
+
+  /* Transitions */
+  --transition: 220ms ease;
+}

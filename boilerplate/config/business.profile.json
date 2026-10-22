@@ -1,0 +1,52 @@
+{
+  "id": "myhairloss",
+  "name": "Brian Ivie Hair & Extensions",
+  "domain": "myhairloss.com",
+  "theme": {
+    "primary": "#c5a059",
+    "background": "#0a0a0a",
+    "surface": "#1a1a1a",
+    "text": "#fdfdfb",
+    "muted": "#9ca3af",
+    "accent": "#d4b46a"
+  },
+  "content": {
+    "tagline": "Executive Hair Restoration",
+    "description": "Expert hair loss education, treatment guides, and research-backed information by Brian Ivie Hair & Extensions — St. Louis's trusted hair restoration specialist.",
+    "hero": {
+      "headline": "Mastery in Every Strand.",
+      "subheadline": "Executive restoration for the modern professional. Custom molded systems, clinical laser therapy, and premium artistry.",
+      "ctaLabel": "Book Consultation"
+    },
+    "services": [
+      {
+        "title": "Hair Replacement",
+        "description": "Custom molded systems, perfected for each customer's color and fit. Indistinguishable from natural growth."
+      },
+      {
+        "title": "Laser Hair Therapy",
+        "description": "Clinical-grade LLLT to stimulate growth, thicken hair, and revitalize follicles. Essential post-op care."
+      },
+      {
+        "title": "Hair Extensions",
+        "description": "Premium extensions for length, volume, and color. Expertly applied for a seamless, natural blend."
+      },
+      {
+        "title": "Transplant Consultations",
+        "description": "Professional coordination with top St. Louis surgeons. We manage your journey and recovery."
+      }
+    ],
+    "about": {
+      "headline": "A Lifetime of Hair Restoration Expertise",
+      "body": "From House of Ivie in 1967 to today — a lifetime of family tradition. Brian Ivie is a hair restoration specialist, not a medical doctor. His expertise lies in hair systems, styling, laser therapy, and coordinating your care with qualified physicians."
+    },
+    "footer": {
+      "copyrightEntity": "Personal Image Solution"
+    }
+  },
+  "contact": {
+    "email": "info@myhairloss.com",
+    "phone": "(314) 776-8990",
+    "address": "Salon Lofts Heritage Place, 12511 Olive Blvd, Creve Coeur, MO 63141"
+  }
+}

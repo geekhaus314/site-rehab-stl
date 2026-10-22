@@ -1,0 +1,130 @@
+/* ============================================================
+ * GLOBAL STYLES — White-label boilerplate engine
+ * Theme variables are injected by src/styles/theme.css (auto-generated
+ * from config/business.profile.json via scripts/generate-theme.js).
+ * No brand values are hardcoded in this file.
+ * ============================================================ */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: var(--theme-background);
+  color: var(--theme-text);
+  font-family: var(--font-sans);
+  min-height: 100vh;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button, input, textarea, select {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-serif);
+  line-height: 1.1;
+}
+
+h1 { font-size: clamp(2.5rem, 6vw, 6rem); }
+h2 { font-size: clamp(2rem, 4vw, 4rem); }
+h3 { font-size: clamp(1.5rem, 3vw, 2.5rem); }
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.section {
+  padding: 6rem 0;
+}
+
+.band {
+  padding: 6rem 0;
+  background-color: var(--theme-surface);
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.85rem 1.75rem;
+  border-radius: var(--radius);
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  cursor: pointer;
+  transition: all var(--transition);
+  border: 1px solid transparent;
+  background-color: var(--theme-primary);
+  color: var(--theme-primary-inverse);
+}
+
+.btn:hover {
+  background-color: var(--theme-accent);
+  color: var(--theme-primary-inverse);
+  transform: translateY(-1px);
+}
+
+.btn-ghost {
+  background-color: transparent;
+  border-color: var(--theme-border);
+  color: var(--theme-text);
+}
+
+.btn-ghost:hover {
+  border-color: var(--theme-border-hover);
+  color: var(--theme-text);
+  background-color: rgba(var(--theme-primary-rgb), 0.05);
+}
+
+.card {
+  background-color: var(--theme-surface);
+  border: 1px solid var(--theme-border);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  transition: border-color var(--transition);
+}
+
+.card:hover {
+  border-color: var(--theme-border-hover);
+}
+
+.muted {
+  color: var(--theme-text-muted);
+  font-size: 0.9rem;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}

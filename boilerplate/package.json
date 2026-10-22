@@ -1,0 +1,28 @@
+{
+  "name": "site-boilerplate-engine",
+  "version": "0.1.0",
+  "private": true,
+  "description": "White-label Next.js 14 Pages Router boilerplate engine. Rebrand by editing config/business.profile.json.",
+  "scripts": {
+    "dev": "next dev",
+    "build": "npm run prebuild && next build",
+    "prebuild": "node scripts/validate-config.js && node scripts/generate-theme.js",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "gray-matter": "^4.0.3",
+    "lucide-react": "^0.468.0",
+    "next": "14.2.35",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "reading-time": "^1.5.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.57.0",
+    "eslint-config-next": "14.2.35"
+  },
+  "engines": {
+    "node": ">=18.17.0"
+  }
+}
