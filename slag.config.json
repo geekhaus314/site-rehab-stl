@@ -1,0 +1,25 @@
+{
+  "$schema": "./slag.schema.json",
+  "version": 1,
+  "strictness": "standard",
+  "mode": "auto",
+  "factsFile": "slag.facts.json",
+  "framework": "next",
+  "include": [
+    "**/*"
+  ],
+  "ignore": [],
+  "commands": {
+    "build": "npm run build",
+    "typecheck": "npx --no-install tsc --noEmit",
+    "lint": "npm run lint"
+  },
+  "capabilities": [],
+  "limits": {},
+  "verification": {
+    "timeoutMs": 600000,
+    "requireEvidence": true,
+    "requiredCommands": [],
+    "allowNoCommands": false
+  }
+}
